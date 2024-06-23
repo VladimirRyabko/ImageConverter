@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xdev Images Downloader</title>
+  <link rel="icon" href="image_icon_153794.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex h-100 text-center">
+  
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto text-center"> <!-- Aggiunto "text-center" -->
+          <div class="menu">
+            <h3 class="mb-0">Image Downloader</h3> <!-- Rimossa la classe "float-md-start" -->
+          </div>
+        </header>
+
+    <main class="px-3">
+      <h1>Download Files</h1>
+    <p class="lead">Enter the image file URL below to download it.</p>
+
+      
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter file URL" id="file-url">
+        <button onclick="downloadFile(document.getElementById('file-url').value)" class="btn btn-primary" id="download-btn">Download</button> 
+       
+      </div>
+      <select class="form-select-sm" id="file-format">
+        <option value="jpg">JPG</option>
+        <option value="png">PNG</option>
+        <option value="svg">SVG</option>
+        <option value="gif">GIF</option>
+        <option value="webp">WEBP</option>
+        <option value="ico">ICO</option>
+      </select>
+      <div id="status-message"></div>
+    </main>
+
+   
+   <div id="prewiew-container"></div>
+
+    <footer class="mt-auto text-white-50">
+      <p>&copy; 2023 xdev. All rights reserved.</p>
+    </footer>
+  </div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- download.js -->
+<script src="https://cdn.jsdelivr.net/npm/downloadjs@1.4.7/dist/download.min.js"></script>
+<!-- FileSaver.js -->
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+<!-- fetch -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.6.2/fetch.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
